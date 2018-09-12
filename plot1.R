@@ -22,15 +22,6 @@ bigdata <- subset(bigdata, Date >= "2007-02-01" & Date <= "2007-02-02")
 # To filtering date in date format.
 
 
-bigdata <- bigdata %>% mutate(Days = ifelse(Date == "2007-02-02", "Friday", "Thursday"))
-
-# To create new variable as Days.
-
-bigdata$Days <- as.factor(bigdata$Days)
-
-# For changing Days columns format to proper to plotting.
-
-
 bigdata$Global_active_power <- as.numeric(as.character(bigdata$Global_active_power))
 
 # To changing factor to numeric
